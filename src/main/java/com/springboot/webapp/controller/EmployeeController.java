@@ -19,12 +19,7 @@ public class EmployeeController {
 
 	@Autowired
 	EmployeeServiceInterface employeeServiceInterface;
-	
-	@GetMapping("test")
-	public void getname() {
-		//
-		System.out.println("name:nayamsoft");
-	}
+
 	
 	@GetMapping("/")
 	public String savePage(Model model) {
