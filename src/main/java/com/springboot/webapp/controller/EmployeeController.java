@@ -20,9 +20,17 @@ public class EmployeeController {
 	@Autowired
 	EmployeeServiceInterface employeeServiceInterface;
 
+	@GetMapping("/test")
+	public String savePage1(Model model) {
+		System.out.println();
+		model.addAttribute("employee", new Employee());
+		model.addAttribute("allEmployees", (ArrayList<Employee>)employeeServiceInterface.getAllEmployees());
+		return "index";
+	}
 	
 	@GetMapping("/")
 	public String savePage(Model model) {
+		System.out.println();
 		model.addAttribute("employee", new Employee());
 		model.addAttribute("allEmployees", (ArrayList<Employee>)employeeServiceInterface.getAllEmployees());
 		return "index";
