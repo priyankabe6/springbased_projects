@@ -22,6 +22,7 @@ public class EmployeeController {
 	
 	@GetMapping("test")
 	public void getname() {
+		//
 		System.out.println("name:nayamsoft");
 	}
 	
