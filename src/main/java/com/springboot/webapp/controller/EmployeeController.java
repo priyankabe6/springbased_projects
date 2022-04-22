@@ -20,6 +20,14 @@ public class EmployeeController {
 	@Autowired
 	EmployeeServiceInterface employeeServiceInterface;
 
+	@GetMapping("/test/sample/page")
+	public String samplepage(Model model) {
+		System.out.println();
+		model.addAttribute("employee", new Employee());
+		model.addAttribute("allEmployees", (ArrayList<Employee>)employeeServiceInterface.getAllEmployees());
+		return "index";
+	}
+	
 	
 	@GetMapping("/test/sample")
 	public String testpage(Model model) {
